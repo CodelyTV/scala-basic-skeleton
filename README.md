@@ -16,7 +16,7 @@ It could be useful if you want to start from scratch a kata or a little exercise
   * [`scalastyle-config.xml`][link-scalastyle-config]
   * [`.gitignore`][link-gitignore]
   * [`.editorconfig`][link-editorconfig]
-  * [`.travis.yml`][link-travis]
+  * [`.travis.yml`][link-travis-yml]
 
 ## How To Start
 
@@ -51,6 +51,6 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-scalastyle-config]: .scalastyle-config.xml
 [link-gitignore]: .gitignore
 [link-editorconfig]: .editorconfig    
-[link-travis]: .travis.yml           
+[link-travis-yml]: .travis.yml           
 [link-author]: https://github.com/CodelyTV
 [link-contributors]: ../../contributors
