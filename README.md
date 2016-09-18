@@ -48,7 +48,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-travis]: https://travis-ci.org/CodelyTV/scala_bootstrap
 [link-readme]: README.md
 [link-build-sbt]: build.sbt
-[link-scalastyle-config]: .scalastyle-config.xml
+[link-scalastyle-config]: scalastyle-config.xml
 [link-gitignore]: .gitignore
 [link-editorconfig]: .editorconfig    
 [link-travis-yml]: .travis.yml           
