@@ -14,6 +14,7 @@ It could be useful if you want to start from scratch a kata or a little exercise
   * [`LICENSE`][link-license]
   * [`build.sbt`][link-build-sbt]
   * [`scalastyle-config.xml`][link-scalastyle-config]
+  * [`.scalafmt.conf`][link-scalafmt-config]
   * [`.gitignore`][link-gitignore]
   * [`.editorconfig`][link-editorconfig]
   * [`.travis.yml`][link-travis-yml]
@@ -24,7 +25,8 @@ It could be useful if you want to start from scratch a kata or a little exercise
 2. Run [SBT](http://www.scala-sbt.org/) on the project directory `sbt`.
 3. Run the [scalatests](http://www.scalatest.org/) with `t`.
 4. Check the [scalastyle](http://www.scalastyle.org/) in the production code with `s` and use the `ts` command to check the test code style.
-5. Start your project!
+5. Check the [scalaFmt](http://scalafmt.org) with `tf` command to check the code style and apply guidelines with `f`.
+6. Start your project!
 
 ## Other programming languages
 
@@ -49,6 +51,7 @@ The MIT License (MIT). Please see [License File][link-license] for more informat
 [link-readme]: README.md
 [link-build-sbt]: build.sbt
 [link-scalastyle-config]: scalastyle-config.xml
+[link-scalafmt-config]: .scalafmt.conf
 [link-gitignore]: .gitignore
 [link-editorconfig]: .editorconfig    
 [link-travis-yml]: .travis.yml           
