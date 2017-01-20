@@ -7,16 +7,20 @@ object Configuration {
     scalaVersion := "2.11.8",
 
     // Compiler options
-    scalacOptions <<= version map { v: String =>
-      val default = Seq(
-        "-Xlint", // More warnings when compiling
-        "-Xfatal-warnings", // Warnings became errors
-        "-unchecked", // More warnings. Strict
-        "-deprecation", // Warnings deprecation
-        "-feature" // Advise features
-      )
-      if (v.endsWith("SNAPSHOT")) default :+ "-Xcheckinit" else default // Check against early initialization
-    },
+    scalacOptions ++= Seq(
+      "-deprecation", // Warnings deprecation
+      "-feature", // Advise features
+      "-unchecked", // More warnings. Strict
+      "-Xlint", // More warnings when compiling
+      "-Xfatal-warnings", // Warnings became errors
+      "-Ywarn-dead-code",
+      "-Ywarn-unused",
+      "-Ywarn-unused-import",
+      "-Xcheckinit" // Check against early initialization
+    ),
+
+    scalacOptions in run in Compile -= "-Xcheckinit", // Remove it in production since it isn't performant
+
     javaOptions += "-Duser.timezone=UTC",
 
     // Test options
