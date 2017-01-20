@@ -5,7 +5,6 @@ object Configuration {
   val settings = Seq(
     organization := "tv.codely",
     scalaVersion := "2.11.8",
-
     // Compiler options
     scalacOptions ++= Seq(
       "-deprecation", // Warnings deprecation
@@ -18,11 +17,8 @@ object Configuration {
       "-Ywarn-unused-import",
       "-Xcheckinit" // Check against early initialization
     ),
-
-    scalacOptions in run in Compile -= "-Xcheckinit", // Remove it in production since it isn't performant
-
+    scalacOptions in run in Compile -= "-Xcheckinit", // Remove it in production because it's expensive
     javaOptions += "-Duser.timezone=UTC",
-
     // Test options
     parallelExecution in Test := false,
     testForkedParallel in Test := false,
