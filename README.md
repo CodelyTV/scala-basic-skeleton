@@ -28,6 +28,16 @@ It could be useful if you want to start from scratch a kata or a little exercise
 5. Check the [scalaFmt](http://scalafmt.org) with `tf` command to check the code style and apply guidelines with `f`.
 6. Start your project!
 
+## Pre-push Git hook
+
+There's one Git hook included. It's inside the `doc/hooks` folder and it will run the `prep` SBT task before pushing to any remote.
+
+This `prep` task is intended to run all the checks you consider before pushing. At this very moment, it try to compile and check the code style rules with ScalaStyle and ScalaFmt.
+ 
+You can define what this task does just modifying the `prep` task in the `build.sbt` file. We like the approach of just running 1 single SBT task as the hook instead of multiple tasks because it's more efficient (the hook doesn't has to run SBT multiple times), and also because this way we can control the pre push tasks just with the SBT alias defined at the `build.sbt` without altering the hooks.
+ 
+If you want to install this hook, just `cd doc/hooks` and run `./install-hooks.sh`.
+
 ## Other programming languages
 
 * [PHP](https://github.com/CodelyTV/php-bootstrap)
