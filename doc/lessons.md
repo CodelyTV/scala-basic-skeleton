@@ -1,17 +1,17 @@
 # Lessons
-* Why Scala?
-* Values, variables, lazy and def
-* Basic Scala Syntax and Types
-* Functions
-* Scalatest crash course
-* Collections
-* Collection higher order functions
-* OOP
-* Options
-* Futures
-* Pattern-matching
-* Destructuring
-* SBT
-* Implicits
-* Error Handling
-* Actor Model
+* [Why Scala?](doc/lessons/1-why-scala.md)
+* [Values, variables, lazy and def](doc/lessons/2-values-variables-lazy.md)
+* [Basic Scala Syntax and Types](doc/lessons/3-basic-syntax-types.md)
+* [Functions](doc/lessons/4-anonymous-functions.md)
+* [Scalatest crash course](doc/lessons/5-pragmatic-scala-test.md)
+* [Collections](doc/lessons/6-collection-types.md)
+* [Collection higher order functions](doc/lessons/7-common-functions.md)
+* [OOP](doc/lessons/8-OOP-object-caseclass-traits-generics.md)
+* [Options](doc/lessons/9-options.md)
+* [Futures](doc/lessons/10-futures.md)
+* [Pattern-matching](doc/lessons/11-pattern-matching.md)
+* [Destructuring](doc/lessons/12-destructuring.md)
+* [SBT](doc/lessons/13-sbt.md)
+* [Implicits](doc/lessons/14-implicits.md)
+* [Error Handling](doc/lessons/15-error-handling.md)
+* [Actor Model](doc/lessons/16-actor-model.md)
