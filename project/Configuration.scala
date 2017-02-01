@@ -3,7 +3,7 @@ import sbt.Keys._
 
 object Configuration {
   val settings = Seq(
-    organization := "tv.codely",
+    organization := "com.letgo",
     scalaVersion := "2.12.1",
     // Compiler options
     scalacOptions ++= Seq(
