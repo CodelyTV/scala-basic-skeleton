@@ -22,11 +22,16 @@ It could be useful if you want to start from scratch a kata or a little exercise
 ## How To Start
 
 1. Clone this repository `git clone https://github.com/CodelyTV/scala_bootstrap`.
-2. Run [SBT](http://www.scala-sbt.org/) on the project directory `sbt`.
-3. Run the [scalatests](http://www.scalatest.org/) with `t`.
-4. Check the [scalastyle](http://www.scalastyle.org/) in the production code with `s` and use the `ts` command to check the test code style.
-5. Check the [scalaFmt](http://scalafmt.org) with `tf` command to check the code style and apply guidelines with `f`.
-6. Start your project!
+2. Get your Slack API Token:  
+    * In a browser, visit the Tokens for Testing page at [slack docs](http://api.slack.com/docs/oauth-test-tokens).
+    * Scroll to find the Team and User that you'd like to create a token for.
+    * Click Create token.
+3. Export Your Slack API Token `export LETGO_SCALA_COURSE_SLACK_API_TOKEN="[YourSlackToken]"` 
+4. Run [SBT](http://www.scala-sbt.org/) on the project directory `sbt`.
+5. Run the [scalatests](http://www.scalatest.org/) with `t`.
+6. Check the [scalastyle](http://www.scalastyle.org/) in the production code with `s` and use the `ts` command to check the test code style.
+7. Check the [scalaFmt](http://scalafmt.org) with `tf` command to check the code style and apply guidelines with `f`.
+8. Start your project!
 
 ## Pre-push Git hook
 
