@@ -1,15 +1,10 @@
 package com.letgo.scala_course.application
 
-import scala.concurrent.ExecutionContext
+import scala.concurrent.{ExecutionContext, Future}
 
-import com.letgo.scala_course.domain.{ChannelName, SlackClient}
+import com.letgo.scala_course.domain.{ChannelId, Message, SlackClient}
 
 class SlackMessagesFetcherUseCase(slackClient: SlackClient)(implicit ec: ExecutionContext) {
-  def fetch(channelName: ChannelName): String = {
-    val messagesFuture = slackClient.fetchChannelMessages(channelName)
-
-    messagesFuture.foreach(messages => messages.foreach(println))
-
-    "Fetching..."
-  }
+  def fetch(channelName: ChannelId): Future[Seq[Message]] =
+    slackClient.fetchChannelMessages(channelName)
 }

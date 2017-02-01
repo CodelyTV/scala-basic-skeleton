@@ -45,6 +45,10 @@ You can define what this task does just modifying the `prep` task in the `build.
  
 If you want to install this hook, just `cd doc/hooks` and run `./install-hooks.sh`.
 
+## Help just in case
+
+* [Slack API documentation and tester](https://api.slack.com/methods/)
+
 ## Other programming languages
 
 * [PHP](https://github.com/CodelyTV/php-bootstrap)
