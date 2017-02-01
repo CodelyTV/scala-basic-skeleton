@@ -19,4 +19,8 @@ class GilbertSlackClient(implicit as: ActorSystem, ec: ExecutionContext) extends
       }
     }
   }
+
+  override def addMessage(channel: ChannelId, message: Message): Future[_] = {
+    client.postChatMessage(channel.rawChannelId, message.text)
+  }
 }
