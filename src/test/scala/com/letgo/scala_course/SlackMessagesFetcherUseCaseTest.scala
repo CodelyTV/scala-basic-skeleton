@@ -1,24 +1,36 @@
 package com.letgo.scala_course
 
-import org.scalatest.{GivenWhenThen, WordSpec}
+import akka.actor.ActorSystem
 import org.scalatest.Matchers._
+import org.scalatest.{GivenWhenThen, WordSpec}
 
 import com.letgo.scala_course.application.SlackMessagesFetcherUseCase
+import com.letgo.scala_course.domain.ChannelName
+import com.letgo.scala_course.infrastructure.GilbertSlackClient
 
 class SlackMessagesFetcherUseCaseTest extends WordSpec with GivenWhenThen {
+  implicit private val actorSystem      = ActorSystem("test-actor-system")
+  implicit private val executionContext = scala.concurrent.ExecutionContext.global
+
+  private val slackMessagesFetcherUseCase = new SlackMessagesFetcherUseCase(new GilbertSlackClient)
+
   "SlackMessagesFetcher" should {
     "say hello" in {
       Given("a SlackMessagesFetcher")
 
-      val fetcher = new SlackMessagesFetcherUseCase
+      val fetcher = slackMessagesFetcherUseCase
 
-      When("we ask him to fetch")
+      And("an existing channel name")
 
-      val greeting = fetcher.fetch("#olakase")
+      val channelName = ChannelName("#random")
 
-      Then("he should say Fetching...")
+      When("we fetch the channel messages")
 
-      greeting shouldBe "Fetching..."
+      val messages = fetcher.fetch(channelName)
+
+      Then("it should return Fetching...")
+
+      messages shouldBe "Fetching..."
     }
   }
 }
