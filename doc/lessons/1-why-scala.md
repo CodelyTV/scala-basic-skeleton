@@ -1,7 +1,7 @@
 # Why Scala
 
 ## OOP - Functional
-* Promotes and make it easier to deal with immutability
+* Promotes and makes it easier to handle immutability
 * Immutable collection APIs by default
 * Case Classes
 ```scala
@@ -26,10 +26,10 @@ case class Message(text: String) { 
 
 
 ## Scala Ecosystem
-* [Akka] (http://akka.io/)
-* [Kafka] (https://kafka.apache.org/)
-* [Spark] (http://spark.apache.org/)
-* [Play] (https://www.playframework.com/)
-* [Slick] (http://slick.lightbend.com/)
-* [ScalaTest] (http://www.scalatest.org/)
+* [Akka](http://akka.io/)
+* [Kafka](https://kafka.apache.org/)
+* [Spark](http://spark.apache.org/)
+* [Play](https://www.playframework.com/)
+* [Slick](http://slick.lightbend.com/)
+* [ScalaTest](http://www.scalatest.org/)
 
