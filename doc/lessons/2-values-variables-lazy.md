@@ -75,7 +75,7 @@ loroloMessage.text = "Second value for the ImmutableMessage text" // error: reas
 
 ## Lazy immutable values
 
-Take into account, that the assignments could be as complex as we want to. That is, we can also use the block construction in order to define a value:
+Take into account that the assignments could be as complex as we want to. That is, we can also use the block construction in order to define a value since blocks always return the last statement on it:
 ```scala
 lazy val lazyMessage = {
   println("We're inside the lazyMessage definition")
@@ -152,7 +152,7 @@ We've already developed for you the skeleton of a use case in order to interact 
 
 ### Starting up the environment
 
-You will have to get an Slack API access token and set it as an environment variable (explained in [the README.md of this repo](../../README.md)). Once you do that, you should be able to execute the test from the `sbt`:
+You will have to get an Slack API access token and set it as an environment variable (explained in [the README.md of this repo](../../README.md#how-to-start)). Once you do that, you should be able to execute the test from the `sbt`:
 
 `to com.letgo.scala_course.SlackMessagesFetcherUseCaseTest`
 
@@ -160,7 +160,7 @@ Take a look at [the #scala-course Slack channel](https://letgoapp.slack.com/arch
 
 ### ToDo
 
-Right now, the `com.letgo.scala_course.application.SlackMessagesFetcherUseCase.fetch` method goes to the Slack API on each
+Right now, the `com.letgo.scala_course.application.SlackMessagesFetcherUseCase.fetch` method goes to the Slack API on each invocation. Try to improve it applying an counter, and a cache.
  
 #### API calls counter
 
