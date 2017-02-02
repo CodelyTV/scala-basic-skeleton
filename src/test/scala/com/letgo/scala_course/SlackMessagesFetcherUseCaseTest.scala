@@ -20,11 +20,11 @@ class SlackMessagesFetcherUseCaseTest extends WordSpec with GivenWhenThen with S
   )
 
   private val client                      = new GilbertSlackClient
-  private val slackMessagesFetcherUseCase = new SlackMessagesFetcherUseCase(client)
-  private val slackMessageAdderUseCase    = new SlackMessageAdderUseCase(client)
+  private def slackMessagesFetcherUseCase = new SlackMessagesFetcherUseCase(client)
+  private def slackMessageAdderUseCase    = new SlackMessageAdderUseCase(client)
 
   "SlackMessagesFetcher" should {
-    "say hello" in {
+    "fetch the last message published to a channel" in {
       Given("a SlackMessagesFetcher")
 
       val fetcher = slackMessagesFetcherUseCase
@@ -33,17 +33,57 @@ class SlackMessagesFetcherUseCaseTest extends WordSpec with GivenWhenThen with S
 
       val scalaCourseChannelId = ChannelId("C3YPYMQ2D")
 
-      val message = Message("letgo")
+      And("a published message to the channel")
 
+      val message = Message("letgo")
       slackMessageAdderUseCase.add(scalaCourseChannelId, message).futureValue
 
       When("we fetch the channel messages")
 
       val messages = fetcher.fetch(scalaCourseChannelId)
 
-      Then("it should return Fetching...")
+      Then("it should return the last added one")
 
       messages.futureValue.head shouldBe message
+    }
+
+    "increment the number of calls to the Slack API when executing it" in {
+      Given("a SlackMessagesFetcher")
+
+      val fetcher = slackMessagesFetcherUseCase
+
+      And("an existing channel name")
+
+      val scalaCourseChannelId = ChannelId("C3YPYMQ2D")
+
+      When("we fetch the channel messages twice")
+
+      fetcher.fetch(scalaCourseChannelId).futureValue
+      fetcher.fetch(scalaCourseChannelId).futureValue
+
+      Then("it should count the 2 calls")
+
+      fetcher.numberOfApiCalls shouldBe 2
+    }
+
+    "only call once to the API even if we execute it twice when we use cache" in {
+      Given("a SlackMessagesFetcher")
+
+      val fetcher = slackMessagesFetcherUseCase
+
+      And("an existing channel name")
+
+      val scalaCourseChannelId = ChannelId("C3YPYMQ2D")
+
+      When("we fetch with cache the channel messages twice")
+
+      fetcher.fetchWithCache(scalaCourseChannelId).futureValue
+      fetcher.fetchWithCache(scalaCourseChannelId).futureValue
+
+      Then("it should count the only call")
+
+      fetcher.numberOfApiCalls shouldBe 1
+      fetcher.cache should not be empty
     }
   }
 }

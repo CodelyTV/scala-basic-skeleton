@@ -12,6 +12,7 @@ class GilbertSlackClient(implicit as: ActorSystem, ec: ExecutionContext) extends
   private val client = SlackApiClient(token)
 
   override def fetchChannelMessages(channelId: ChannelId): Future[Seq[Message]] = {
+    println(s"You're fetching messages from channel ID: ${channelId.rawChannelId}.")
 
     client.getChannelHistory(channelId.rawChannelId).map { historyChunk =>
       historyChunk.messages.map { jsValue =>
