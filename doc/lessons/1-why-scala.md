@@ -18,7 +18,11 @@ val helloMessage = Message("Hello")
 ## Type inference (avoid Java verbosity) 
 ```scala
 case class Message(text: String) { 
-  def messageLength = text.length  // inference Int 
+  def messageLength: Int = {
+    val totalLength = text.length // Int inference
+  
+    totalLength
+  }
 }
 ```
 
