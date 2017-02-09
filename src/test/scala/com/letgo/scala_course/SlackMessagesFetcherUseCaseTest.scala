@@ -35,7 +35,7 @@ class SlackMessagesFetcherUseCaseTest extends WordSpec with GivenWhenThen with S
 
       And("a published message to the channel")
 
-      val message = Message("letgo")
+      val message = Message("Jorge, cortate el pelo")
       slackMessageAdderUseCase.add(scalaCourseChannelId, message).futureValue
 
       When("we fetch the channel messages")
