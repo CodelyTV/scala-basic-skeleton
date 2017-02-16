@@ -13,14 +13,14 @@ class MessageAnalyticsServiceTest extends WordSpec with Matchers {
 
       val msgAnalyticsService = new MessageAnalyticsService()
 
-      msgAnalyticsService.groupBy(Seq.empty) should contain theSameElementsAs Map.empty
+      msgAnalyticsService.groupByUserName(Seq.empty) should contain theSameElementsAs Map.empty
     }
 
     "group single message by user" in {
 
       val msgAnalyticsService = new MessageAnalyticsService()
 
-      msgAnalyticsService.groupBy(
+      msgAnalyticsService.groupByUserName(
         Seq(
           UserMessage(
             UserName("Jorge Avila"),
@@ -34,7 +34,7 @@ class MessageAnalyticsServiceTest extends WordSpec with Matchers {
 
       val msgAnalyticsService = new MessageAnalyticsService()
 
-      msgAnalyticsService.groupBy(
+      msgAnalyticsService.groupByUserName(
         Seq(
           UserMessage(
             UserName("Jorge Avila"),
@@ -67,8 +67,8 @@ class MessageAnalyticsServiceTest extends WordSpec with Matchers {
           Message("Yo fui a las pruebas de la Real")
         ),
         UserName("SergiGP") -> Seq(
-          Message("Me tengo que pelar"),
-          Message("Yo fui a las pruebas de la Real")
+          Message("La burbuja va a estallar"),
+          Message("Ya llegareis")
         ),
         UserName("Dani De Ripo") -> Seq(
           Message("El TT es un iman...")
