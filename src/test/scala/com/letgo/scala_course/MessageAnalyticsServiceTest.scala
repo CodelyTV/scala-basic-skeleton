@@ -9,6 +9,15 @@ class MessageAnalyticsServiceTest extends WordSpec with Matchers {
 
   "MessageAnalyticsService" should {
 
+    "count messages of user" in {
+
+      val msgAnalyticsService = new MessageAnalyticsService()
+
+      // TODO implement test
+
+      true shouldBe false
+    }
+
     "group empty messages by user" in {
 
       val msgAnalyticsService = new MessageAnalyticsService()
