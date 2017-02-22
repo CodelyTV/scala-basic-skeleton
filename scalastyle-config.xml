@@ -216,8 +216,8 @@ This file is divided into 3 sections:
             <parameter name="group.java">javax?\..*</parameter>
             <parameter name="group.scala">scala\..*</parameter>
             <parameter name="group.play">play\..*</parameter>
-            <parameter name="group.3rdParty">(?!com\.letgo\.).*</parameter>
-            <parameter name="group.letgo">com\.letgo\..*</parameter>
+            <parameter name="group.3rdParty">(?!tv\.codely\.).*</parameter>
+            <parameter name="group.codely">tv\.codely\..*</parameter>
         </parameters>
     </check>
 
