@@ -13,3 +13,4 @@ src_managed/
 project/boot/
 project/plugins/project/
 native/
+.idea/

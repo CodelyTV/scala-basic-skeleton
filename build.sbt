@@ -7,8 +7,9 @@ Configuration.settings
 
 /** ********* PROD DEPENDENCIES *****************/
 libraryDependencies ++= Seq(
-  "com.github.nscala-time" %% "nscala-time" % "2.16.0",
-  "com.lihaoyi"            %% "pprint"      % "0.4.4"
+  "com.github.nscala-time" %% "nscala-time"        % "2.16.0",
+  "com.lihaoyi"            %% "pprint"             % "0.4.4",
+  "com.github.gilbertw1"   %% "slack-scala-client" % "0.2.0"
 )
 
 /** ********* TEST DEPENDENCIES *****************/
