@@ -21,6 +21,8 @@ It could be useful if you want to start from scratch a kata or a little exercise
 
 ## How To Start
 
+[Video screencast](http://codely.tv/screencasts/entorno-scala/) (in Spanish) 
+
 1. Clone this repository `git clone https://github.com/CodelyTV/scala_bootstrap`.
 2. Run [SBT](http://www.scala-sbt.org/) on the project directory `sbt`.
 3. Run the [scalatests](http://www.scalatest.org/) with `t`.
@@ -40,6 +42,7 @@ If you want to install this hook, just `cd doc/hooks` and run `./install-hooks.s
 
 ## Other programming languages
 
+* [Scala g8 template](https://github.com/CodelyTV/scala-bootstrap-template.g8) Useful to bootstrap your project with the `sbt new` command!
 * [PHP](https://github.com/CodelyTV/php-bootstrap)
 * [Scala](https://github.com/CodelyTV/scala_bootstrap)
 
