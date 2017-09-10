@@ -1,2 +1,2 @@
-addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "0.8.0")
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.5.2-RC1")
+addSbtPlugin("com.geirsson"   % "sbt-scalafmt"           % "1.2.0")
+addSbtPlugin("org.scalastyle" %% "scalastyle-sbt-plugin" % "1.0.0")
