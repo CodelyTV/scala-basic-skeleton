@@ -4,7 +4,7 @@ import sbt.Keys._
 object Configuration {
   val settings = Seq(
     organization := "tv.codely",
-    scalaVersion := "2.12.3",
+    scalaVersion := "2.12.4",
     // Compiler options
     scalacOptions ++= Seq(
       "-deprecation", // Warnings deprecation
