@@ -1,5 +1,8 @@
 # Scala Bootstrap (base / project skeleton)
- 
+
+> [!IMPORTANT]  
+> Project deprecated in favor of [Codely Scala Basic Skeleton (powered by Giter 8)](https://github.com/CodelyTV/scala-basic-skeleton.g8)
+
 [![Software License][ico-license]][link-license]
 [![Build Status][ico-travis]][link-travis]
  
